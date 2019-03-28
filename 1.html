@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.clock{
+				height: 600px;
+				width: 600px;
+				background: url(img/clock.jpg) no-repeat;
+				margin: 0 auto;	
+				position: relative;
+			}
+			.clock div{
+				width: 600px;
+				height: 600px;
+				position: absolute;
+				left: 0px;]
+				top: 0px;
+			}
+			.clock div.hour{
+				background: url(img/hour.png) no-repeat center center;
+			}
+			.clock div.minute{
+				background: url(img/minute.png) no-repeat center centers;
+			}
+			.clock div.second{
+				background: url(img/second.png) no-repeat center center;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				function $(id){
+				return document.getElementById(id);
+				}
+			
+				function fn(){
+					var currenTime = new Date();
+				    var ms = currenTime.getMilliseconds();
+				    var second = currenTime.getSeconds()+ms/1000;
+				    var minute = currenTime.getMinutes()+second/60;
+				    var hour = currenTime.getHours()+minute/60;
+				    $("s").style.transform="rotate("+second*6+"deg)";
+					$("m").style.transform="rotate("+minute*6+"deg)";
+					$("h").style.transform="rotate("+hour*30+"deg)";
+				}
+				setInterval(fn,1000);
+			}
+				
+		</script>
+	</head>
+	<body>
+	  <div class="clock">
+	  	<div class="hour" id="h">
+	  		
+	  	</div>
+	  	<div class="minute" id="m">
+	  		
+	  	</div>
+	  	<div class="second" id="s">
+	  		
+	  	</div>
+	  </div>
+	</body>
+</html>
