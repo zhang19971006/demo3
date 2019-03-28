@@ -37,7 +37,8 @@
 			}
 		</style>
 	</head>
-	<script type="text/javascript">3
+	<script type="text/javascript">
+		
 		window.onload=function(){
 			var btns = document.getElementsByTagName("button");
 			 var divs = document.getElementsByClassName("botom")[0].getElementsByTagName("div");
@@ -56,6 +57,10 @@
 						divs[this.index].style.display="block";
 					}
 				}
+			var btn1=document.getElementById("btn1");
+			btn1.onclick=function(){
+				location.href="1.html";
+			}
 	}
 		
 	</script>
@@ -75,5 +80,6 @@
 				</div>
 			</div>
 		</div>
+		<button id="btn1">1</button>
 	</body>
 </html>
